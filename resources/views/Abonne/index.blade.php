@@ -19,30 +19,37 @@
                 <th class="">E-mail</th>
                 <th class="compt">Action</th>
             </tr>
-            @php ($i=1);
+
             @foreach($abonnes as $abonne)
 
             <tr class="text-center">
-                <td>{{$i}}</td>
+                <td style="width: 75px;">{{$i}}</td>
                 <td>{{$abonne->nom}}</td>
                 <td>{{$abonne->date_n}}</td>
                 <td>{{$abonne->date_db}}</td>
                 <td>{{$abonne->telephone}}</td>
                 <td>{{$abonne->email}}</td>
-                <td>
-                    <a href="{{route('Abonne.edit',$abonne->id)}}" class="btn btn-primary rounded-pill fw-bold"><i class='fa-solid fa-pen bg-primary'></i></a>
-                    <a href="{{route('Abonne.destroy',$abonne->id)}}" class="btn btn-danger rounded-pill fw-bold"><i class='fa-solid fa-trash bg-danger'></i></a>
-                </td>
-            </tr>
-            {{ $i++}}
-            @endforeach
-
-
-        </table>
-        <script>
-            
-        </script>
+                <td style="width: 75px;">
+                    <div class="d-flex justify-content-around">
+                        <a href="{{route('Abonne.edit',$abonne->id)}}" class="border-2 text-decoration-none text-dark"><i class="fa fa-pen fw-bold "></i></a>
+                        <form action="{{route('Abonne.destroy',$abonne->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"><i class='fas fa-trash fw-bold'></i></button>
+                        </form>
+                    </div>
     </div>
+
+    </tr>
+    {{ $i++}}
+    @endforeach
+
+
+
+
+    </table>
+
+</div>
 
 </div>
 @endsection

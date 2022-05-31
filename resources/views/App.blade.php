@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('fontawesome/css/all.min.css')}}">
+
+    <script src="{{asset('js/index.js')}}" defer></script>
+    <script src="{{asset('js/jquery-3.6.0.js')}}"></script>
+
 
     <title>abonnee</title>
 </head>
@@ -19,7 +24,7 @@
             <img src="{{asset('img/auf.jpg')}}">
         </div>
         <div class=" col-md-6 offset-md-1  d-flex align-items-center">
-            <span class="fw-bold fs-1" style="color: rgb(75, 2, 143)">Gestion des Administrateurs</span>
+            <span class="fw-bold fs-1" style="color: rgb(75, 2, 143)">Gestion des Abonnés</span>
         </div>
 
     </div>
@@ -29,10 +34,12 @@
 
 
     @yield('content')
-
     <script src="{{asset('js/app.js')}}"></script>
-
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('fontawesome/js/all.min.js')}}"></script>
+
+
+
 
 </body>
 

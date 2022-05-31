@@ -15,7 +15,8 @@ class AbonneController extends Controller
     public function index()
     {
         $abonnes = Abonnes::all();
-        return view('Abonne.index', compact('abonnes'));
+        $i=1;
+        return view('Abonne.index', compact('abonnes','i'));
     }
 
     /**
@@ -41,7 +42,7 @@ class AbonneController extends Controller
             'date_n' => 'required',
             'date_db' => 'required',
             'telephone' => 'required',
-            'email' => 'required',
+            'email' => 'required',      
         ]);
         $abonne = new Abonnes();
         $abonne->nom = $request->input('nom');
@@ -51,7 +52,7 @@ class AbonneController extends Controller
         $abonne->email = $request->input('email');
         $abonne->save();
        return redirect()->route('Abonne.index')
-                        ->with('success','Abonne created successfully.');
+                        ->with('success','Abonné ajouté avec succès');
         
     }
 
@@ -74,7 +75,8 @@ class AbonneController extends Controller
      */
     public function edit($id)
     {
-        //
+        $abonne = Abonnes::findOrFail($id);
+        return view('Abonne.edit', compact('abonne'));
     }
 
     /**
@@ -86,7 +88,24 @@ class AbonneController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate(
+            ['nom'=>'required',
+                'date_n'=>'required',
+                'date_db'=>'required',
+                'telephone'=>'required',
+                'email'=>'required',
+
+            ]
+        );
+        $abonne = Abonnes::findOrFail($id);
+        $abonne->nom = $request->input('nom');
+        $abonne->date_n = $request->input('date_n');
+        $abonne->date_db = $request->input('date_db');
+        $abonne->telephone = $request->input('telephone');
+        $abonne->email = $request->input('email');
+        $abonne->save();
+        return redirect()->route('Abonne.index')
+        ->with('success','Abonné modifié avec succès');
     }
 
     /**
@@ -97,6 +116,11 @@ class AbonneController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $abonne = Abonnes::findOrFail($id);
+        $abonne->delete();
+        return redirect()->route('Abonne.index')
+                        ->with('success','Abonné supprimé avec succès');
+
+
     }
 }
