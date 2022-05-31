@@ -10,5 +10,9 @@
 $(function () {
     setTimeout(function () {
         $("#success").hide();
-    }, 3000);
+    }, 5000);
 });
+
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );

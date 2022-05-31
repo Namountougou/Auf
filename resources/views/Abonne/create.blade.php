@@ -1,10 +1,10 @@
 @extends('App')
 @section('content')
 @if ($errors->any())
-<div class="alert alert-danger bg-danger">
+< class="alert alert-danger bg-danger">
     
         @foreach ($errors->all() as $error)
-        <div class="">{{ $error }}</div>
+        {{ $error }}
         @endforeach
     
 </div>

@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('fontawesome/css/all.min.css')}}">
-
-    <script src="{{asset('js/index.js')}}" defer></script>
+    <link rel="stylesheet" href="{{asset('css/datatables.min.css')}}">
     <script src="{{asset('js/jquery-3.6.0.js')}}"></script>
+    <script src="{{asset('js/datatables.min.js')}}"></script>
+
+
 
 
     <title>abonnee</title>
@@ -34,11 +36,10 @@
 
 
     @yield('content')
-    <script src="{{asset('js/app.js')}}"></script>
+    <!-- <script src="{{asset('js/app.js')}}"></script> -->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('fontawesome/js/all.min.js')}}"></script>
-
-
+    <script src="{{asset('js/index.js')}}" defer></script>
 
 
 </body>
