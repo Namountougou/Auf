@@ -1,7 +1,7 @@
 @extends('App')
 @section('content')
 @if(session()->has('success'))
-<div class="alert alert-success">
+<div class="alert alert-success fs-3 fw-bold text-center col-md-6 offset-md-3" id="success">
     {{ session()->get('success') }}
 </div>
 @endif
@@ -39,6 +39,9 @@
 
 
         </table>
+        <script>
+            
+        </script>
     </div>
 
 </div>
