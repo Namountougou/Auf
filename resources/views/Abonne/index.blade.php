@@ -1,13 +1,13 @@
 @extends('App')
 @section('content')
 @if(session()->has('success'))
-<div class="alert alert-success fs-3 fw-bold text-center col-md-6 offset-md-3" id="success">
+<div class=" bg-success fs-4 fw-bold text-center col-md-6 offset-md-3" id="success" style="height: 40px">
     {{ session()->get('success') }}
 </div>
 @endif
 
 
-<div class="row table">
+<div class="row table mt-4">
     <div class="col-md-12 border-2 border-danger rounded-2 overflow-scroll " style="height: 475px">
         <table class="table table-striped-row border-2 border-danger rounded-2">
             <tr class=" bg-primary text-light text-center fw-bold fs-6 " style="height: 30px; position:sticky; top:0;">
@@ -19,7 +19,7 @@
                 <th class="">E-mail</th>
                 <th class="compt">Action</th>
             </tr>
-
+            @php $i=1 @endphp
             @foreach($abonnes as $abonne)
 
             <tr class="text-center">
@@ -41,7 +41,7 @@
     </div>
 
     </tr>
-    {{ $i++}}
+    @php $i++ @endphp
     @endforeach
 
 

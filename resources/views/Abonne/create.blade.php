@@ -4,7 +4,7 @@
 <div class="alert alert-danger bg-danger">
     
         @foreach ($errors->all() as $error)
-        <p>{{ $error }}</p>
+        <div class="">{{ $error }}</div>
         @endforeach
     
 </div>

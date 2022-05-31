@@ -15,8 +15,8 @@ class AbonneController extends Controller
     public function index()
     {
         $abonnes = Abonnes::all();
-        $i=1;
-        return view('Abonne.index', compact('abonnes','i'));
+        
+        return view('Abonne.index', compact('abonnes'));
     }
 
     /**
