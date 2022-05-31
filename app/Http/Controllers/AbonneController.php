@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Abonne;
+use App\Models\Abonnes;
 
 class AbonneController extends Controller
 {
@@ -14,7 +14,8 @@ class AbonneController extends Controller
      */
     public function index()
     {
-        //
+        $abonnes = Abonnes::all();
+        return view('Abonne.index', compact('abonnes'));
     }
 
     /**
@@ -35,7 +36,23 @@ class AbonneController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nom' => 'required',
+            'date_n' => 'required',
+            'date_db' => 'required',
+            'telephone' => 'required',
+            'email' => 'required',
+        ]);
+        $abonne = new Abonnes();
+        $abonne->nom = $request->input('nom');
+        $abonne->date_n = $request->input('date_n');
+        $abonne->date_db = $request->input('date_db');
+        $abonne->telephone = $request->input('telephone');
+        $abonne->email = $request->input('email');
+        $abonne->save();
+       return redirect()->route('Abonne.index')
+                        ->with('success','Abonne created successfully.');
+        
     }
 
     /**

@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+.logo {
+  height: 140px;
+}
+.logo img {
+  height: 100%;
+}
+.log1 {
+  height: 200px;
+}
+.log1 img {
+  height: 100%;
+}
+.log {
+  height: 50px;
+  width: 200px;
+  text-align: center;
+}
+.log img {
+  height: 50px;
+  width: 150px;
+}
+
+.coll {
+  margin-top: 6rem !important;
+}
+@media only screen and (max-width: 768px) {
+   .logo {
+    height: 100px;
+    width: 350px;
+  }
+  .logo img {
+    height: 100px;
+  } 
+  .log {
+    height: 50px;
+    width: 200px;
+    text-align: center;
+  }
+  .log img {
+    height: 50px;
+    width: 150px;
+  }
+
+}
+table th {
+  padding: 10px;
+  top: 0;
+  position: sticky;
+  width: 200px;
+}
+table td {
+  border: 1px solid #750202;
+  background-color: rgb(230, 230, 230) !important;
+  padding: 10px;
+  height: 30px;
+  width: 200px;
+}
+
+table .mail {
+  width: 350px;
+}
+table .compt {
+  width: 80px;
+}
+table i {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+
+
+
+
+
+
+
+
