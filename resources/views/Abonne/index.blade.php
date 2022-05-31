@@ -10,7 +10,8 @@
 <div class="row table mt-4">
     <div class="col-md-12 border-2 border-danger rounded-2 overflow-scroll " style="height: 475px">
         <table class="table table-striped-row border-2 border-danger rounded-2" id="myTable">
-            <thead <tr class=" bg-primary text-light text-center fw-bold fs-6 " style="height: 30px; position:sticky; top:0;">
+            <thead> 
+            <tr class=" bg-primary text-light text-center fw-bold fs-6 " style="height: 30px; position:sticky; top:0;">
                 <th class="compt">No</th>
                 <th class="">Nom</th>
                 <th class="">Date de naissance</th>
@@ -52,6 +53,7 @@
     </table>
 
 </div>
+<a href="{{route('Abonne.edit',$abonne->id)}}" class="border-2 text-decoration-none text-dark">Ajouter</a>
 
 </div>
 @endsection
