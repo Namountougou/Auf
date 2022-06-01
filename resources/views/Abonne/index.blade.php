@@ -7,18 +7,18 @@
 @endif
 
 
-<div class="row table mt-4">
-    <div class="col-md-12 border-2 border-danger rounded-2 overflow-scroll " style="height: 475px">
+<div class="row table">
+    <div class="col-md-12 border-2 border-danger rounded-2 overflow-scroll " style="height: 470px">
         <table class="table table-striped-row border-2 border-danger rounded-2" id="myTable">
-            <thead> 
-            <tr class=" bg-primary text-light text-center fw-bold fs-6 " style="height: 30px; position:sticky; top:0;">
-                <th class="compt">No</th>
-                <th class="">Nom</th>
-                <th class="">Date de naissance</th>
-                <th class="">Date d'abonnement</th>
-                <th class="">Numero de telephone</th>
-                <th class="">E-mail</th>
-                <th class="compt">Action</th>
+            <thead>
+                <tr class=" bg-primary text-light text-center fw-bold fs-6 " style="height: 30px; position:sticky; top: 0;">
+                    <th class="compt">No</th>
+                    <th class="">Nom</th>
+                    <th class="">Date de naissance</th>
+                    <th class="">Date d'abonnement</th>
+                    <th class="">Telephone</th>
+                    <th class="">E-mail</th>
+                    <th class="compt">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -53,7 +53,12 @@
     </table>
 
 </div>
-<a href="{{route('Abonne.edit',$abonne->id)}}" class="border-2 text-decoration-none text-dark">Ajouter</a>
 
+<div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-around col-md-4 offset-md-4 ms-4">
+        <a class="btn btn-danger rounded-3 fw-bold text-decoration-none" href="{{route('home')}}">Fermer</a>
+        <a class="btn btn-primary rounded-3 fw-bold text-decoration-none" href="{{route('Abonne.create')}}">Ajouter</a>
+        <a class="btn btn-success rounded-3 fw-bold text-decoration-none" href="{{route('Abonne.index')}}">Lister</a>
+    </div>
 </div>
 @endsection
