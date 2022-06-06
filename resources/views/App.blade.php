@@ -32,13 +32,13 @@
             @guest
             @if (Route::has('login'))
 
-            <a class="btn btn-primary" href="{{ route('login') }}">{{ __('Login') }}</a>
+            <a class="btn btn-primary" href="{{ route('login') }}">{{ __('Connexion') }}</a>
 
             @endif
 
             @if (Route::has('register'))
 
-            <a class="btn btn-success" href="{{ route('register') }}">{{ __('Register') }}</a>
+            <a class="btn btn-success" href="{{ route('register') }}">{{ __('Inscrire') }}</a>
 
             @endif
             @else

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 bg-success fs-4 fw-bold text-center" style="margin-top: 150px;">
             <span class="text-light">
-                Bonjour ET bienvenue sur votre espace!
+                Bonjour et bienvenue sur votre espace!
             </span>
         </div>
 
